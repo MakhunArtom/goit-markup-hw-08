@@ -1,39 +1,70 @@
 .features {
-  padding-top: 94px;
-  padding-bottom: 94px;
-
   background-color: var(--backgr-work);
+
+  @include device(mobyle) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @include device(tablet) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @include device(desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
-/* __ Сховати заголовок____ */
-// .features__section-title {
-//   position: absolute;
-//   width: 1px;
-//   height: 1px;
-//   margin: -1px;
-//   border: 0;
-//   padding: 0;
-//   white-space: nowrap;
-//   clip-path: inset(100%);
-//   clip: rect(0 0 0 0);
-//   overflow: hidden;
-// }
+.features__list {
+  @include device(mobyle) {
+    display: block;
+  }
 
-// .features__list {
-//   display: flex;
-// }
+  @include device(tablet) {
+    display: flex;
+  }
+
+  @include device(desktop) {
+    display: flex;
+  }
+}
 
 /* прибрати крапки в списках*/
 .features__item {
   list-style-type: none;
+
+  @include device(mobyle) {
+    width: 100%;
+
+    margin-bottom: 30px;
+  }
+
+  @include device(tablet) {
+    width: 354px;
+
+    margin-bottom: 30px;
+  }
+
+  @include device(desktop) {
+    width: 270px;
+  }
 }
 
-.features__item {
-  width: 270px;
+// Відступи між особливостями
+@include device(desktop) {
+  .features__item + .features__item {
+    margin-left: 30px;
+  }
 }
-// .features__item + .features__item {
-//   margin-left: 30px;
-// }
+
+@include device(tablet) {
+  .features__item + .features__item {
+    margin-left: 30px;
+  }
+}
+
+// _______________________________________
 
 .features__second-title {
   font-weight: 700;
@@ -62,6 +93,8 @@
   height: 120px;
   justify-content: center;
   align-items: center;
+
+  width: 100%;
 
   margin-bottom: 30px;
   border-radius: 4px;
