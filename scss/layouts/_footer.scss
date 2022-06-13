@@ -59,9 +59,16 @@
 
 /*-------- Подпишись------*/
 .footer-lable {
-  width: 358px;
-  height: 50px;
-  margin-right: 12px;
+  @include device(mobyle_only) {
+    // display: flex;
+  }
+
+  @include device(tablet_only) {
+  }
+
+  @include device(desktop) {
+    margin-right: 12px;
+  }
 }
 
 .telegram-icon {
@@ -69,8 +76,19 @@
   margin-left: 10px;
 }
 .input-email {
-  width: 358px;
   height: 50px;
+  @include device(mobyle_only) {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  @include device(tablet_only) {
+    width: 450px;
+  }
+
+  @include device(desktop) {
+    width: 358px;
+  }
 
   padding-left: 16px;
   background-color: #2f303a;
@@ -88,20 +106,40 @@
 .input-email:focus {
   border: 2px solid var(--color-button);
 }
+
 .sibscribe .form__button-submit {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.subscribe-form {
   @include device(mobyle_only) {
-    display: block;
-    text-align: center;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+
+    margin-top: 20px;
   }
 
   @include device(tablet_only) {
-    display: block;
-    text-align: center;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+
+    margin-top: 20px;
+  }
+
+  @include device(desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.subscribe-form {
+  @include device(desktop) {
+    display: flex;
+  }
+}
+
+.footer__contact-social {
+  @include device(tablet_only) {
+    display: flex;
   }
 
   @include device(desktop) {
@@ -123,6 +161,7 @@
   @include device(desktop) {
     display: flex;
     align-items: baseline;
+    justify-content: space-between;
   }
 }
 
@@ -148,19 +187,16 @@
   }
 }
 
+@include device(tablet_only) {
+  .footer__tablet {
+    margin-right: 165px;
+    margin-left: 71px;
+  }
+}
+
 .one-two .social-icon {
   fill: var(--backgr-header);
 }
-
-// .one-two .socials {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
-
-// .one-two .social-item:not(:last-child) {
-//   margin-right: 10px;
-// }
 
 .one-two .socials-link {
   display: flex;
@@ -171,4 +207,14 @@
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-button);
+  }
+
+  &:hover .social-icon,
+  &:focus .social-icon {
+    fill: #ffffff;
+  }
 }
