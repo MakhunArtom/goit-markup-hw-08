@@ -1,3 +1,10 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: var(--backgr-hero);
+}
+
 .footer .text {
   font-size: 14px;
   line-height: 1.71;
@@ -6,6 +13,7 @@
 
   color: #ffffff;
 }
+
 .footer .link {
   display: block;
   font-size: 14px;
@@ -15,10 +23,12 @@
 
   color: rgba(255, 255, 255, 0.6);
 }
+
 .footer .link:hover,
 .footer .link:focus {
   color: #2196f3;
 }
+
 .address .text {
   margin-bottom: 9px;
 }
@@ -26,19 +36,7 @@
 .address-item:not(:last-child) {
   margin-bottom: 9px;
 }
-.footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
 
-  background-color: var(--backgr-hero);
-}
-
-/* ____sosial-icon_____*/
-
-.footer-container {
-  display: flex;
-  align-items: baseline;
-}
 .title-social {
   font-weight: 700;
   font-size: 14px;
@@ -49,30 +47,7 @@
   color: #ffffff;
   margin-bottom: 20px;
 }
-.one-two:not(:last-child) {
-  margin-right: 70px;
-}
-.one-two .social-icon {
-  fill: var(--backgr-header);
-}
-.one-two .socials {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.one-two .social-item:not(:last-child) {
-  margin-right: 10px;
-}
-.one-two .socials-link {
-  display: flex;
-  width: 44px;
-  height: 44px;
 
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-}
 .socials-link:hover,
 .socials-link:focus {
   background-color: var(--color-button);
@@ -119,5 +94,81 @@
   justify-content: center;
 }
 .subscribe-form {
+  @include device(mobyle_only) {
+    display: block;
+    text-align: center;
+  }
+
+  @include device(tablet_only) {
+    display: block;
+    text-align: center;
+  }
+
+  @include device(desktop) {
+    display: flex;
+  }
+}
+
+.footer-container {
+  @include device(mobyle_only) {
+    display: block;
+    text-align: center;
+  }
+
+  @include device(tablet_only) {
+    display: block;
+    text-align: center;
+  }
+
+  @include device(desktop) {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.footer__contact-social {
+  @include device(tablet_only) {
+    display: flex;
+  }
+}
+
+.one-two {
+  @include device(mobyle_only) {
+    margin-bottom: 60px;
+  }
+
+  @include device(tablet_only) {
+    margin-bottom: 60px;
+  }
+}
+
+@include device(desktop) {
+  .one-two:not(:last-child) {
+    margin-right: 70px;
+  }
+}
+
+.one-two .social-icon {
+  fill: var(--backgr-header);
+}
+
+// .one-two .socials {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .one-two .social-item:not(:last-child) {
+//   margin-right: 10px;
+// }
+
+.one-two .socials-link {
   display: flex;
+  width: 44px;
+  height: 44px;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
 }

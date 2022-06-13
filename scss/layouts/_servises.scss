@@ -1,4 +1,12 @@
 .services {
+  @include device(mobyle_only) {
+    display: none;
+  }
+
+  @include device(tablet_only) {
+    display: none;
+  }
+
   padding-bottom: 94px;
   background-color: var(--backgr-work);
 }

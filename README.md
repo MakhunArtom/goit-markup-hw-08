@@ -23,3 +23,15 @@ min-resolution.
 «C4» Верстка виконана щодо трьох точок перелому: 480px, 768px і 1200px.
 
 «C5» Виконано оформлення мобільного меню.
+
+@include device(mobyle_only) {
+
+}
+
+@include device(tablet_only) {
+
+}
+
+@include device(desktop) {
+
+}

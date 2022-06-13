@@ -1,11 +1,11 @@
 .features {
   background-color: var(--backgr-work);
 
-  @include device(mobyle) {
+  @include device(mobyle_only) {
     padding-top: 60px;
     padding-bottom: 60px;
   }
-  @include device(tablet) {
+  @include device(tablet_only) {
     padding-top: 60px;
     padding-bottom: 60px;
   }
@@ -17,13 +17,10 @@
 }
 
 .features__list {
-  @include device(mobyle) {
-    display: block;
-  }
-
-  @include device(tablet) {
+  @include device(tablet_only) {
     display: flex;
     flex-wrap: wrap;
+    margin: -15px;
   }
 
   @include device(desktop) {
@@ -35,25 +32,20 @@
 .features__item {
   list-style-type: none;
 
-  @include device(mobyle) {
-    width: 100%;
-  }
   @include device(mobyle_only) {
     margin-bottom: 30px;
   }
 
-  @include device(tablet) {
-    width: 354px;
-  }
-
   @include device(tablet_only) {
-    &:nth-child(2n + 1) {
-      margin-right: 30px;
-    }
+    flex-basis: calc((100% - 60px) / 2);
+    margin: 15px;
+    // &:nth-child(2n + 1) {
+    //   margin-right: 30px;
+    // }
 
-    &:not(:nth-last-child(-n + 2)) {
-      margin-bottom: 30px;
-    }
+    // &:not(:nth-last-child(-n + 2)) {
+    //   margin-bottom: 30px;
+    // }
   }
 
   @include device(desktop) {
@@ -61,14 +53,11 @@
   }
 }
 
-// Відступи між особливостями
 @include device(desktop) {
   .features__item + .features__item {
     margin-left: 30px;
   }
 }
-
-// _______________________________________
 
 .features__second-title {
   font-weight: 700;
@@ -90,7 +79,6 @@
   color: #757575;
 }
 
-/*SVG - Наши особенности*/
 .features__bgr-icon {
   display: flex;
   background-color: #f5f4fa;
