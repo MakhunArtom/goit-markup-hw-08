@@ -5,7 +5,7 @@
 
   //  Мобільний екран
 
-  @if $type == 'mobyle only' {
+  @if $type == 'mobyle_only' {
     @media screen and (max-width: #{$tablet - 0.02}) {
       @content;
     }
@@ -17,7 +17,7 @@
     }
   }
   //  Екран планшету
-  @if $type == 'tablet only' {
+  @if $type == 'tablet_only' {
     @media screen and (min-width: $tablet) and (max-width: #{$desktop - 0.02}) {
       @content;
     }

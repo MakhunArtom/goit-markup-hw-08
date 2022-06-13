@@ -23,6 +23,7 @@
 
   @include device(tablet) {
     display: flex;
+    flex-wrap: wrap;
   }
 
   @include device(desktop) {
@@ -36,14 +37,23 @@
 
   @include device(mobyle) {
     width: 100%;
-
+  }
+  @include device(mobyle_only) {
     margin-bottom: 30px;
   }
 
   @include device(tablet) {
     width: 354px;
+  }
 
-    margin-bottom: 30px;
+  @include device(tablet_only) {
+    &:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 30px;
+    }
   }
 
   @include device(desktop) {
@@ -53,12 +63,6 @@
 
 // Відступи між особливостями
 @include device(desktop) {
-  .features__item + .features__item {
-    margin-left: 30px;
-  }
-}
-
-@include device(tablet) {
   .features__item + .features__item {
     margin-left: 30px;
   }
