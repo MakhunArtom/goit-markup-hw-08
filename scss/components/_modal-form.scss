@@ -24,7 +24,18 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 528px;
+  @include device(mobyle_only) {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  @include device(tablet_only) {
+    width: 450px;
+  }
+
+  @include device(desktop) {
+    width: 528px;
+  }
 
   padding: 40px;
 

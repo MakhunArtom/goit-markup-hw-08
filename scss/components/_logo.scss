@@ -1,16 +1,31 @@
 .logo {
   padding-top: 25px;
   padding-bottom: 25px;
-  margin-right: 93px;
+
   font-family: 'Raleway';
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
 
   letter-spacing: 0.03em;
   text-decoration: none;
 
   color: #212121;
+
+  @include device(mobyle_only) {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+
+  @include device(tablet_only) {
+    font-size: 24px;
+    line-height: 1.17;
+    margin-right: 88px;
+  }
+
+  @include device(desktop) {
+    font-size: 26px;
+    line-height: 1.2;
+    margin-right: 93px;
+  }
 }
 .logo__web {
   color: var(--color-button);
