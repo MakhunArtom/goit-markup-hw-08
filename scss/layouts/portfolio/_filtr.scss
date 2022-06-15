@@ -72,37 +72,10 @@
   }
 }
 
-@include device(mobyle_only) {
-  .filtr .item + .item {
-    margin-left: 8px;
-    margin-bottom: 15px;
-  }
-
-  .filtr-button .filtr .item:nth-child(4) {
-    margin-left: 0px;
-  }
-}
-
-@include device(tablet_only) {
-  .filtr .item + .item {
-    margin-left: 8px;
-  }
-}
-
-@include device(desktop) {
-  .filtr .item + .item {
-    margin-left: 8px;
-  }
-}
-
 .filtr .item + .item {
-  margin-left: 8px;
+  margin-right: 8px;
 
   @include device(mobyle_only) {
     margin-bottom: 15px;
-
-    .filtr .item:nth-child(4) {
-      margin-left: -8px;
-    }
   }
 }
