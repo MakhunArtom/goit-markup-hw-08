@@ -1,0 +1,45 @@
+.mobyle__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: #fff;
+
+  overflow-y: scroll;
+}
+
+.mobyle__backdrop.is-hidden {
+  // display: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.mobyle__modal-form {
+  padding: 48px 40px;
+
+  max-width: 480px;
+  width: 100%;
+}
+
+@include device(tablet_only) {
+  .mobyle {
+    display: none;
+  }
+  // .mobyle__backdrop {
+  //   display: none;
+  // }
+
+  // .mobyle__modal-form {
+  //   display: none;
+  // }
+}
+
+@include device(desktop) {
+  .mobyle {
+    display: none;
+  }
+}
