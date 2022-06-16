@@ -26,10 +26,98 @@
   <body>
     <header class="header">
       <div class="container header__container">
-        <a href="./" aria-label="Логотип сайта Web Studio" class="logo">
-          <span class="logo__web">Web</span>Studio</a
-        >
         <nav class="nav">
+          <a href="./" aria-label="Логотип сайта Web Studio" class="logo"
+            ><span class="logo__web">Web</span>Studio</a
+          >
+
+          <!-- _____________________Mobyle Menu______________ -->
+
+          <button
+            type="button"
+            class="mobyle__button is-open"
+            aria-expanded="false"
+            data-menu-button
+          >
+            <svg
+              class="mobyle__menu-cross-icon"
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use class="mobyle__icon-menu" href="./image/symbol-defs1.svg#icon-close_mob"></use>
+              <use class="mobyle__icon-cross" href="./image/symbol-defs1.svg#icon-menu_mob"></use>
+            </svg>
+          </button>
+
+          <div class="mobyle__menu data-menu" data-menu>
+            <ul class="mobyle__nav">
+              <li class="mobyle__nav-item">
+                <a href="./index.html" class="mobyle__link-web link">Студия</a>
+              </li>
+              <li class="mobyle__nav-item">
+                <a href="./portfolio.html" class="mobyle__link-web link">Портфолио</a>
+              </li>
+              <li class="mobyle__nav-item">
+                <a href="" class="mobyle__link-web link">Контакты</a>
+              </li>
+            </ul>
+
+            <ul class="mobyle__contact">
+              <li class="mobyle__contact-item">
+                <a href="tel:380961111111" class="mobyle__link-contact">+38 096 111 11 11</a>
+              </li>
+              <li class="mobyle__contact-item">
+                <a href="mailto:info@devstudio.com" class="mobyle__link-contact-email"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+
+            <ul class="mobyle__socials">
+              <li class="mobyle__sociale-item">
+                <a
+                  href=""
+                  class="mobyle__link-sociale"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="иконка instagram"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mobyle__sociale-item">
+                <a
+                  href=""
+                  class="mobyle__link-sociale"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="иконка twitter"
+                  >Twitter</a
+                >
+              </li>
+              <li class="mobyle__sociale-item">
+                <a
+                  href=""
+                  class="mobyle__link-sociale"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="иконка facebook"
+                  >Facebook</a
+                >
+              </li>
+              <li class="mobyle__sociale-item">
+                <a
+                  href=""
+                  class="mobyle__link-sociale"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="иконка linkedin"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+
           <ul class="nav__site">
             <li class="item nav__item">
               <a class="link nav__link" href="./index.html">Студия</a>
@@ -42,12 +130,11 @@
             </li>
           </ul>
         </nav>
-        <!--_____Contacts_______-->
 
         <ul class="contact">
           <li class="item contact__item">
             <a class="link contact__link" href="mailto:info@devstudio.com">
-              <svg class="contact__icon" width="16" height="12">
+              <svg class="contact__icon contact__icon--emaile" width="16" height="12">
                 <use href="./image/symbol-defs1.svg#icon-emaile-icon"></use>
               </svg>
               info@devstudio.com</a
@@ -55,7 +142,7 @@
           </li>
           <li class="item contact__item">
             <a class="link contact__link" href="tel:380961111111:">
-              <svg class="contact__icon" width="10" height="16">
+              <svg class="contact__icon contact__icon--tel" width="10" height="16">
                 <use href="./image/symbol-defs1.svg#icon-mobile-icon"></use>
               </svg>
               +38 096 111 11 11</a
