@@ -79,6 +79,11 @@
     width: 354px;
     height: 374px;
   }
+
+  @include device(desktop) {
+    width: 270px;
+    height: 260px;
+  }
 }
 
 .team .second-title {

@@ -30,8 +30,6 @@
 
 @include device(mobyle_only) {
   .mobyle__menu {
-    display: none;
-
     position: absolute;
     top: 0;
     left: 0;
@@ -46,8 +44,16 @@
 
     background-color: #fff;
 
+    transform: scale(0.4);
+    opacity: 0;
+
     &.is-open {
       display: flex;
+
+      transition: transform 250ms ease-in-out 400ms, opacity 250ms ease-in-out 400ms;
+
+      transform: scale(1);
+      opacity: 1;
     }
 
     flex-direction: column;
