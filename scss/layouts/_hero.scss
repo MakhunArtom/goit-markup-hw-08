@@ -14,10 +14,10 @@
   background-color: var(--backgr-hero);
 
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('/image/hero/header1_sm.jpg');
+    url('../../image/hero/header1_sm.jpg');
   @include device(retina) {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url('/image/hero/header1_sm@2x.jpg');
+      url('../../image/hero/header1_sm@2x.jpg');
   }
 
   @include device(mobyle_only) {
