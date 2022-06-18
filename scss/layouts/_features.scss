@@ -33,7 +33,9 @@
   list-style-type: none;
 
   @include device(mobyle_only) {
-    margin-bottom: 30px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 
   @include device(tablet_only) {

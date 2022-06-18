@@ -59,13 +59,6 @@
 
 /*-------- Подпишись------*/
 .footer-lable {
-  @include device(mobyle_only) {
-    // display: flex;
-  }
-
-  @include device(tablet_only) {
-  }
-
   @include device(desktop) {
     margin-right: 12px;
   }
@@ -160,39 +153,48 @@
 
   @include device(desktop) {
     display: flex;
-    align-items: baseline;
+    // align-items: baseline;
     justify-content: space-between;
   }
 }
 
 .footer__contact-social {
-  @include device(tablet_only) {
-    display: flex;
-  }
-}
-
-.one-two {
   @include device(mobyle_only) {
     margin-bottom: 60px;
   }
 
   @include device(tablet_only) {
+    display: flex;
+    justify-content: space-around;
     margin-bottom: 60px;
   }
 }
 
-@include device(desktop) {
-  .one-two:not(:last-child) {
-    margin-right: 70px;
+.one-two {
+  @include device(mobyle_only) {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+  @include device(desktop) {
+    &:not(:last-child) {
+      margin-right: 70px;
+    }
   }
 }
 
-@include device(tablet_only) {
-  .footer__tablet {
-    margin-right: 165px;
-    margin-left: 71px;
-  }
-}
+// @include device(desktop) {
+//   .one-two:not(:last-child) {
+//     margin-right: 70px;
+//   }
+// }
+
+// @include device(tablet_only) {
+//   .footer__tablet {
+//     margin-right: 165px;
+//     margin-left: 71px;
+//   }
+// }
 
 .one-two .social-icon {
   fill: var(--backgr-header);

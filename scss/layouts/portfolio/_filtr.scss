@@ -56,26 +56,29 @@
   @include device(mobyle_only) {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 40px;
+    margin-bottom: 40px;
   }
 
   @include device(tablet_only) {
     display: flex;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
     justify-content: center;
   }
 
   @include device(desktop) {
     display: flex;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
     justify-content: center;
   }
 }
 
-.filtr .item + .item {
-  margin-right: 8px;
-
+.filtr .item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
   @include device(mobyle_only) {
-    margin-bottom: 15px;
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 15px;
+    }
   }
 }

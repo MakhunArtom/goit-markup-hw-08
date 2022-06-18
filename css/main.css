@@ -393,7 +393,6 @@ ul {
   padding-bottom: 6px;
   padding-right: 22px;
   padding-left: 22px;
-  margin-right: 8px;
 }
 
 /*_____________MODALKA______*/
@@ -1008,7 +1007,7 @@ ul {
 }
 
 @media screen and (max-width: 767.98px) {
-  .features__item {
+  .features__item:not(:last-child) {
     margin-bottom: 30px;
   }
 }
@@ -1208,7 +1207,7 @@ ul {
 }
 
 @media screen and (max-width: 767.98px) {
-  .team .item {
+  .team .item:not(:last-child) {
     margin-bottom: 30px;
   }
 }
@@ -1617,12 +1616,15 @@ ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .footer__contact-social {
+    margin-bottom: 60px;
   }
 }
 
@@ -1631,17 +1633,14 @@ ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-}
-
-@media screen and (max-width: 767.98px) {
-  .one-two {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     margin-bottom: 60px;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
-  .one-two {
+@media screen and (max-width: 767.98px) {
+  .one-two:not(:last-child) {
     margin-bottom: 60px;
   }
 }
@@ -1649,13 +1648,6 @@ ul {
 @media screen and (min-width: 1200px) {
   .one-two:not(:last-child) {
     margin-right: 70px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
-  .footer__tablet {
-    margin-right: 165px;
-    margin-left: 71px;
   }
 }
 
@@ -1754,7 +1746,7 @@ ul {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding-bottom: 40px;
+    margin-bottom: 40px;
   }
 }
 
@@ -1763,7 +1755,7 @@ ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1775,19 +1767,19 @@ ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
 }
 
-.filtr .item + .item {
+.filtr .item:not(:last-child) {
   margin-right: 8px;
 }
 
 @media screen and (max-width: 767.98px) {
-  .filtr .item + .item {
+  .filtr .item:not(:nth-last-child(-n + 2)) {
     margin-bottom: 15px;
   }
 }
@@ -1925,6 +1917,8 @@ ul {
   .item-img {
     max-width: 450px;
     width: 100%;
+  }
+  .item-img:not(:last-child) {
     margin-bottom: 30px;
   }
 }
